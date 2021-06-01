@@ -28,9 +28,6 @@ about_content: | #Allows new lines to include paragraphs
 
 content:
   - title: Projects # Title for the section
-    sub_title: Projects I watch and contribute to
-    link: github.com/tyler-macinnis
-    link_text: My Github
     layout: list # Type of content section (list/text)
     content:
       - layout: top-middle
