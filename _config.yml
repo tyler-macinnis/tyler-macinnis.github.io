@@ -69,10 +69,11 @@ content:
     content:
       - layout: left
         title: Clemson University
+        link: https://www.clemson.edu/
         caption: December 2022
         sub_title: Bachelor of Science in Computer Science
-        quote: >
-          [*Clemson University*](https://www.clemson.edu/)
+        # quote: >
+          # Quote
         description: | # this will include new lines to allow paragraphs
           Currently studying software development and computer systems organization.
 
