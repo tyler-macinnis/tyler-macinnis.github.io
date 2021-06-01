@@ -28,15 +28,17 @@ about_content: | #Allows new lines to include paragraphs
 
 content:
   - title: Projects # Title for the section
+    sub_title: Projects I watch and contribute to
+    link: github.com/tyler-macinnis
+    link_text: My Github
     layout: list # Type of content section (list/text)
     content:
       - layout: top-middle
-        title: Projects I watch and contribute to
-        link: github.com/tyler-macinnis
+        title: ClemBot Contributor
+        link: github.com/ClemsonCPSC-Discord/ClemBot
         # link_text: Project Website
         additional_links:
           - title:  ClemsonCPSC-Discord/ClemBot
-            sub_title: Contributor
             icon: fab fa-github
             url: github.com/ClemsonCPSC-Discord/ClemBot
           # - title:  Github page for project (eg. sproogen/modern-resume-theme)
@@ -45,7 +47,8 @@ content:
         quote: >
           This is a Discord Bot for the Clemson Computer Science Discord Server.
         description: | # this will include new lines to allow paragraphs
-          I started contributing to this project in September of 2020 as a way of learning python and git. It continues to grow thanks to the efforts Clemson Students and Alumni.
+          I started contributing to this project in September of 2020 as a way of learning python and git.
+          It continues to grow thanks to the efforts Clemson Students and Alumni.
 
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
