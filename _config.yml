@@ -28,7 +28,7 @@ content:
         title: Projects I watch and contribute to
         link: github.com/tyler-macinnis
         # link_text: Project Website
-        # additional_links:
+        additional_links:
           - title:  ClemsonCPSC-Discord/ClemBot
             sub_title: Contributor
             icon: fab fa-github
