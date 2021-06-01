@@ -1,3 +1,110 @@
+# Site
+repository: tyler-macinnis/tyler-macinnis.github.io
+# favicon: images/favicon.ico
+
+# Personal Info
+name: Tyler MacInnis
+title: Computer Science Student
+website: https://tyler-macinnis.github.io/
+
+# Dark Mode
+darkmode: false
+
+# Social links
+twitter_username: Tyler_MacInnis
+github_username: tyler-macinnis
+linkedin_username: tyler-macinnis-compsci
+
+# About Section
+about_profile_image: images/profile.jpg
+about_content: | #Allows new lines to include paragraphs
+  Hi, my name is Tyler and I'm a Computer Science student at Clemson University.
+
+content:
+  - title: Projects # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: top-middle
+        title: Projects I watch and contribute to
+        link: github.com/tyler-macinnis
+        # link_text: Project Website
+        # additional_links:
+          - title:  ClemsonCPSC-Discord/ClemBot
+            sub_title: Contributor
+            icon: fab fa-github
+            url: https://github.com/ClemsonCPSC-Discord/ClemBot
+          # - title:  Github page for project (eg. sproogen/modern-resume-theme)
+          #   icon: fab fa-github
+          #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
+        quote: >
+          This is a Discord Bot for the Clemson Computer Science Discord Server.
+        description: | # this will include new lines to allow paragraphs
+          I started contributing to this project in September of 2020 as a way of learning python and git. It continues to grow thanks to the efforts Clemson Students and Alumni.
+
+  - title: Experience # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: SCDOT York Maintenance
+        # link: 
+        # link_text: 
+        sub_title: Assistant Geodetic Technician
+        caption: May 2019 - August 2019
+        # quote: >
+          # Quote
+        description: | # this will include new lines to allow paragraphs
+            Designed a future-ready Excel Spreadsheet for assessing work crew progress
+            Updated the system for maintaining current SDS and developed a system for printing compliant safety labels
+            Improved the methods for recording and tracking PPE (Personal Protective Equipment)
+
+  - title: Education # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: Clemson University
+        caption: December 2022
+        sub_title: Bachelor of Science in Computer Science
+        # quote: >
+          # Quote
+        description: | # this will include new lines to allow paragraphs
+          Currently studying software development and computer systems organization.
+
+          I spend a lot of my free time as an officer of *TigeRPG*, currently as the *President*.
+
+  - title: Skills # Title for the section
+    layout: text # Type of content section (list/text)
+    content: |
+      - Microsoft Excel Certified
+      - Tools: Git, Windows, Linux, VSCode
+      - Languages: C/++, Java, Python, Unix
+      - Strong understanding of algorithms, data structures, software development and object-oriented programming
+      -	Adaptable and flexible
+      -	Collaboration and teamwork
+      -	Organization and time management
+      -	Excellent communicator
+      -	Strong work ethic
+
+  - title: A Little More About Me
+    layout: text
+    content: | # this will include new lines to allow paragraphs
+      Alongside my interests in computing and software development some of my other interests and hobbies are:
+      - Tabletop Roleplaying Games, particularly Dungeons & Dragons 5e
+      - Reading
+
+    # INDENT Look at this cool image  
+      # ![Trees](/modern-resume-theme/images/landscape-trees.jpg "Trees")
+
+# Footer
+footer_show_references: true
+# references_title: References on request (Override references text)
+
+# Build settings
 theme: jekyll-theme-midnight
-title: Welcome to the homepage!
-description: This is my website about me, my qualifications, and the projects I am working on.
+# remote_theme: sproogen/resume-theme
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+ - jekyll-seo-tag
