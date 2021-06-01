@@ -11,8 +11,8 @@ title: Computer Science Student
 email: thmac2017@gmail.com
 website: https://tyler-macinnis.github.io/
 
-# Dark Mode
-darkmode: false
+# Dark Mode (true/false/never)
+darkmode: true
 
 # Social links
 twitter_username: Tyler_MacInnis
