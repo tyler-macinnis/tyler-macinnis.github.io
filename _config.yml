@@ -1,6 +1,9 @@
 # Site
 repository: tyler-macinnis/tyler-macinnis.github.io
-# favicon: images/favicon.ico
+favicon: images/favicon.ico
+
+# Content configuration version
+version: 2
 
 # Personal Info
 name: Tyler MacInnis
@@ -14,6 +17,9 @@ darkmode: false
 twitter_username: Tyler_MacInnis
 github_username: tyler-macinnis
 linkedin_username: tyler-macinnis-compsci
+
+# Additional icon links
+additional_links:
 
 # About Section
 about_profile_image: images/profile.jpg
@@ -32,7 +38,7 @@ content:
           - title:  ClemsonCPSC-Discord/ClemBot
             sub_title: Contributor
             icon: fab fa-github
-            url: https://github.com/ClemsonCPSC-Discord/ClemBot
+            url: github.com/ClemsonCPSC-Discord/ClemBot
           # - title:  Github page for project (eg. sproogen/modern-resume-theme)
           #   icon: fab fa-github
           #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
