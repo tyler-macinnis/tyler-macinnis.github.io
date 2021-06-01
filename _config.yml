@@ -16,6 +16,7 @@ darkmode: false
 # Social links
 twitter_username: Tyler_MacInnis
 github_username: tyler-macinnis
+instagram_username: tyler_macinnis1
 linkedin_username: tyler-macinnis-compsci
 
 # Additional icon links
@@ -70,12 +71,10 @@ content:
         title: Clemson University
         caption: December 2022
         sub_title: Bachelor of Science in Computer Science
-        # quote: >
-          # Quote
+        quote: >
+          [*Clemson University*](https://www.clemson.edu/)
         description: | # this will include new lines to allow paragraphs
           Currently studying software development and computer systems organization.
-
-          I spend a lot of my free time as an officer of *TigeRPG*, currently as the *President*.
 
   - title: Skills # Title for the section
     layout: text # Type of content section (list/text)
@@ -90,9 +89,16 @@ content:
       -	Excellent communicator
       -	Strong work ethic
 
+  - title: Awards
+    layout: text
+    content: |
+      - Eagle Scout - October 2014
+      - Scottish Rite JROTC Medal for Scholastic Excellence and Americanism - May 2015
+
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
+      I spend a lot of my free time as an officer of [*TigeRPG*](https://clemson.campuslabs.com/engage/organization/tigerpg), currently as the *President*.
       Alongside my interests in computing and software development some of my other interests and hobbies are:
       - Tabletop Roleplaying Games, particularly Dungeons & Dragons 5e
       - Reading
