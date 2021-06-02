@@ -100,7 +100,7 @@ content:
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
-      I spend a lot of my free time as an officer of [*TigeRPG*](https://clemson.campuslabs.com/engage/organization/tigerpg), currently as the *President*.
+      I spend a lot of my free time as an officer of [*TigeRPG*](https://clemson.campuslabs.com/engage/organization/tigerpg), currently as the **President**.
       Alongside my interests in computing and software development some of my other interests and hobbies are:
       - Tabletop Roleplaying Games, particularly Dungeons & Dragons 5e
       - Reading
