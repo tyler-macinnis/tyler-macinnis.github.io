@@ -61,9 +61,9 @@ content:
         # quote: >
           # Quote
         description: | # this will include new lines to allow paragraphs
-            Designed a future-ready Excel Spreadsheet for assessing work crew progress
-            Updated the system for maintaining current SDS and developed a system for printing compliant safety labels
-            Improved the methods for recording and tracking PPE (Personal Protective Equipment)
+            - Designed a future-ready Excel Spreadsheet for assessing work crew progress
+            - Updated the system for maintaining current SDS and developed a system for printing compliant safety labels
+            - Improved the methods for recording and tracking PPE (Personal Protective Equipment)
 
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
