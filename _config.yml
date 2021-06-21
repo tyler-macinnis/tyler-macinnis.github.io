@@ -55,6 +55,18 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
+        title: Harris Teeter Grocery Store
+        # link: 
+        # link_text: 
+        sub_title: Cashier and Personal Shopper
+        caption: November 2018 - January 2019
+        # quote: >
+          # Quote
+        description: | # this will include new lines to allow paragraphs
+            - Handled monetary transactions with accuracy and proficiency
+            - Provided world-class customer service by answering questions and assisting customers
+            - Used situational awareness and grocery store knowledge to find product substitutions as a personal shopper
+
         title: SCDOT York Maintenance
         # link: 
         # link_text: 
