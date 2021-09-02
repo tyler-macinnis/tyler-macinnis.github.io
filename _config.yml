@@ -55,6 +55,19 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
+        title: DHL Supply Chain
+        # link: 
+        # link_text: 
+        sub_title: Loader/Unloader
+        caption: June 2021 - August 2021
+        # quote: >
+          # Quote
+        description: | # this will include new lines to allow paragraphs
+            - Unloaded product deliveries
+            - Maintained cleanliness of the warehouse
+            - Assessed inventory accuracy
+    
+      - layout: left
         title: SCDOT York Maintenance
         # link: 
         # link_text: 
