@@ -66,6 +66,19 @@ content:
             - Unloaded product deliveries
             - Maintained cleanliness of the warehouse
             - Assessed inventory accuracy
+            
+      - layout: left
+        title: Harris Teeter Grocery Store
+        # link: 
+        # link_text: 
+        sub_title: Cashier and Personal Shopper
+        caption: November 2019 - January 2020
+        # quote: >
+          # Quote
+        description: | # this will include new lines to allow paragraphs
+            - Handled monetary transactions with accuracy and proficiency
+            - Provided world-class customer service by answering questions and assisting customers
+            - Used situational awareness and grocery store knowledge to find product substitutions as a personal shopper
     
       - layout: left
         title: SCDOT York Maintenance
@@ -80,19 +93,7 @@ content:
             - Updated the system for maintaining current SDS and developed a system for printing compliant safety labels
             - Improved the methods for recording and tracking PPE (Personal Protective Equipment)
 
-      - layout: left
-        title: Harris Teeter Grocery Store
-        # link: 
-        # link_text: 
-        sub_title: Cashier and Personal Shopper
-        caption: November 2018 - January 2019
-        # quote: >
-          # Quote
-        description: | # this will include new lines to allow paragraphs
-            - Handled monetary transactions with accuracy and proficiency
-            - Provided world-class customer service by answering questions and assisting customers
-            - Used situational awareness and grocery store knowledge to find product substitutions as a personal shopper
-            
+      
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
     content:
