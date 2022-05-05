@@ -114,9 +114,9 @@ content:
     layout: text # Type of content section (list/text)
     content: |
       - Microsoft Excel Certified
-      - Tools: Git, Windows, Linux, VSCode
+      - Tools: Git, Windows, Linux, VSCode, Unity
       - Languages: C/++, Java, Python, Unix
-      - Strong understanding of algorithms, data structures, software development, machine learning, and object-oriented programming
+      - Strong understanding of algorithms, data structures, systems analysis, software development, machine learning, and object-oriented programming
       -	Adaptable and flexible
       -	Collaboration and teamwork
       -	Organization and time management
