@@ -33,6 +33,11 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: top-middle
+        title: Population Dynamics - Virtual Reality Population Simulator
+        description: | # this will include new lines to allow paragraphs
+          Created a educational population simulator targetted towards high school students that runs as a VR application.
+    
+      - layout: top-middle
         title: ClemBot Contributor
         link: github.com/ClemsonCPSC-Discord/ClemBot
         # link_text: Project Website
