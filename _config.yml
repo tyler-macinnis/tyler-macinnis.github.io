@@ -66,9 +66,9 @@ content:
         # quote: >
           # Quote
         description: | # this will include new lines to allow paragraphs
-            - Added unit testing and software validation methods
+            - Added versatile unit testing and software validation methods that can be used for a wide range of embedded systems
             - Improved legacy code while ensuring functionality
-            - Created through documentation on testing procedures for the future
+            - Created detailed documentation on testing procedures for the future
      
       - layout: left
         title: DHL Supply Chain
