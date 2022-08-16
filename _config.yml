@@ -35,7 +35,7 @@ content:
       - layout: top-middle
         title: Population Dynamics - Virtual Reality Population Simulator
         description: | # this will include new lines to allow paragraphs
-          Created a educational population simulator targetted towards high school students that runs as a VR application.
+          Created a educational population simulator targeted towards high school students that runs as a VR application.
     
       - layout: top-middle
         title: ClemBot Contributor
@@ -66,9 +66,9 @@ content:
         # quote: >
           # Quote
         description: | # this will include new lines to allow paragraphs
-            - Added versatile unit testing and software validation methods that can be used for a wide range of embedded systems
-            - Improved legacy code while ensuring functionality
-            - Created detailed documentation on testing procedures for the future
+            - Developed versatile unit testing and software validation procedures that can be used for a wide range of embedded systems, both legacy and future
+            - Improved legacy code performance while ensuring functionality was preserved
+            - Created detailed documentation on implementing best practices for software testing procedures
      
       - layout: left
         title: DHL Supply Chain
@@ -82,19 +82,6 @@ content:
             - Unloaded product deliveries
             - Maintained cleanliness of the warehouse
             - Assessed inventory accuracy
-            
-      - layout: left
-        title: Harris Teeter Grocery Store
-        # link: 
-        # link_text: 
-        sub_title: Cashier and Personal Shopper
-        caption: November 2019 - January 2020
-        # quote: >
-          # Quote
-        description: | # this will include new lines to allow paragraphs
-            - Handled monetary transactions with accuracy and proficiency
-            - Provided world-class customer service by answering questions and assisting customers
-            - Used situational awareness and grocery store knowledge to find product substitutions as a personal shopper
     
       - layout: left
         title: SCDOT York Maintenance
@@ -105,10 +92,24 @@ content:
         # quote: >
           # Quote
         description: | # this will include new lines to allow paragraphs
+            - Created and improved multiple complex spreadsheets with adaptability and user-friendliness as key design elements
             - Designed a future-ready Excel Spreadsheet for assessing work crew progress
-            - Updated the system for maintaining current SDS and developed a system for printing compliant safety labels
-            - Improved the methods for recording and tracking PPE (Personal Protective Equipment)
-
+            - Improved systems for tracking PPE and maintaining current Safety Data Sheets
+            - Assisted in Driveway Inspections throughout York County
+            
+      - layout: left
+        title: Harris Teeter Grocery Store
+        # link: 
+        # link_text: 
+        sub_title: Cashier and Personal Shopper
+        caption: November 2018 - January 2019
+        # quote: >
+          # Quote
+        description: | # this will include new lines to allow paragraphs
+            - Handled monetary transactions with accuracy and proficiency
+            - Provided world-class customer service by answering questions and assisting customers
+            - Used situational awareness and grocery store knowledge to find product substitutions when appropriate
+            - Developed skills and techniques in maintaining optimism and tactfulness regardless of the situation
       
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
