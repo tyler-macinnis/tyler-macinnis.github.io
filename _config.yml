@@ -26,7 +26,7 @@ additional_links:
 # About Section
 about_profile_image: images/profile.jpg
 about_content: | #Allows new lines to include paragraphs
-  Hi, my name is Tyler and I'm a Computer Science student at Clemson University. I aspire to use my computing skills to help make the world a better place. I have a strong work ethic and passion for using my talents. In my spare time, I like to play Dungeons & Dragons, as both a player and a dungeon master.
+  Hi, my name is Tyler and I am a senior Computer Science student at Clemson University. I aspire to use my computing skills to help make my corner of the world a better place. I have a strong work ethic and passion for using my talents. In my spare time, I like to play Dungeons & Dragons, as both a player and a dungeon master.
 
 content:
   - title: Projects # Title for the section
@@ -51,7 +51,7 @@ content:
         quote: >
           This is a Discord Bot for the Clemson Computer Science Discord Server.
         description: | # this will include new lines to allow paragraphs
-          I started contributing to this project in September of 2020 as a way of learning python and git.
+          I began contributing to this project in September of 2020 as a way of learning python and git.
           It continues to grow thanks to the efforts Clemson Students and Alumni.
 
   - title: Experience # Title for the section
@@ -122,14 +122,14 @@ content:
         # quote: >
           # Quote
         description: | # this will include new lines to allow paragraphs
-          Currently studying software development and computer systems organization.
+          Currently studying programming systems, database management systems, and computer security principles.
 
   - title: Skills # Title for the section
     layout: text # Type of content section (list/text)
     content: |
       - Microsoft Excel Certified
       - Tools: Git, Windows, Linux, VSCode, Unity
-      - Languages: C/++, Java, Python, Unix
+      - Languages: C/++, Java, Python, Ruby
       - Strong understanding of algorithms, data structures, systems analysis, software development, machine learning, and object-oriented programming
       -	Adaptable and flexible
       -	Collaboration and teamwork
