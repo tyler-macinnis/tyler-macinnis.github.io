@@ -128,8 +128,8 @@ content:
     layout: text # Type of content section (list/text)
     content: |
       - Microsoft Excel Certified
-      - Tools: Git, Windows, Linux, VSCode, Unity
-      - Languages: C/++, Java, Python, Ruby
+      - Tools: Git, Windows, Linux, Visual Studio, Unity, AWS, and Azure DevOps
+      - Languages: C, C++, Java, Python, Ruby
       - Strong understanding of algorithms, data structures, systems analysis, software development, machine learning, and object-oriented programming
       -	Adaptable and flexible
       -	Collaboration and teamwork
