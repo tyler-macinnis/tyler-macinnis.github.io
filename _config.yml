@@ -7,7 +7,7 @@ version: 2
 
 # Personal Info
 name: Tyler MacInnis
-title: Computer Science Student
+title: Embedded Software Engineer
 email: thmac2017@gmail.com
 website: https://tyler-macinnis.github.io/
 
@@ -33,9 +33,9 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: top-middle
-        title: Population Dynamics - Virtual Reality Population Simulator
+        title: Good Driver Incentive Program
         description: | # this will include new lines to allow paragraphs
-          Created a educational population simulator targeted towards high school students that runs as a VR application.
+          For my senior project, I was the leader for a group project creating a Truck Driver Rewards program using AWS and Django.
     
       - layout: top-middle
         title: ClemBot Contributor
@@ -122,7 +122,7 @@ content:
         # quote: >
           # Quote
         description: | # this will include new lines to allow paragraphs
-          Completed courses in programming systems, database management systems, operating systems, algorithms, data structures, and computer security principles.
+          Final GPA: 3.28
 
   - title: Skills # Title for the section
     layout: text # Type of content section (list/text)
@@ -148,6 +148,7 @@ content:
     content: | # this will include new lines to allow paragraphs
       Alongside my interests in computing and software development some of my other interests and hobbies are:
       - Tabletop Roleplaying Games, particularly Dungeons & Dragons 5e
+      - Artificial Intelligence and Machine Learning
       - Reading
       - Running
       - Hiking
