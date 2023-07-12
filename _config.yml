@@ -61,6 +61,18 @@ content:
         title: Atlas Copco
         # link: 
         # link_text: 
+        sub_title: Embedded Software Engineer
+        caption: January 2023 - Present
+        # quote: >
+          # Quote
+        description: | # this will include new lines to allow paragraphs
+            - Maintain proper testing, documentation, and release procedures and automation
+            - Maintain internal software applications
+            - Keep development strategies up to date
+      - layout: left
+        title: Atlas Copco
+        # link: 
+        # link_text: 
         sub_title: Embedded Systems Intern
         caption: June 2022 - August 2022
         # quote: >
