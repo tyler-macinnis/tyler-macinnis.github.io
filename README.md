@@ -1,7 +1,7 @@
 [Website](https://tyler-macinnis.github.io/)
 
 # 💫 About Me:
-I'm currently working as an Embedded Software Engineer and I'm interested in Artificial Intelligence.
+I am currently working as an Embedded Software Engineer and am passionate about Artificial Intelligence.
 
 
 ## 🌐 Socials:
