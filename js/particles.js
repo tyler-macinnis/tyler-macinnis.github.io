@@ -5,7 +5,6 @@
     const canvas = document.getElementById("hero-canvas");
     if (!canvas) return;
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const ctx = canvas.getContext("2d");
 
     let particles = [];
@@ -105,18 +104,6 @@
 
     resize();
     window.addEventListener("resize", resize);
-
-    if (reduceMotion) {
-        // Draw one static frame only
-        const [cr, cg, cb] = hexToRgb(accent());
-        for (const p of particles) {
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(${cr}, ${cg}, ${cb}, 0.5)`;
-            ctx.fill();
-        }
-        return;
-    }
 
     // Pause when hero is off-screen
     const hero = document.getElementById("hero");

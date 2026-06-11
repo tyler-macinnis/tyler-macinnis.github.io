@@ -57,22 +57,16 @@
                 if (gen === bootGen) dismissBoot();
             }, delay);
 
-        if (reduceMotion) {
-            // Honor reduced-motion: show the full log at once, no line-by-line animation.
-            bootLog.textContent = BOOT_LINES.join("\n");
-            finish(3000);
-        } else {
-            let i = 0;
-            (function nextLine() {
-                if (gen !== bootGen || overlay.classList.contains("done")) return;
-                if (i >= BOOT_LINES.length) {
-                    finish(2200);
-                    return;
-                }
-                bootLog.textContent += BOOT_LINES[i++] + "\n";
-                setTimeout(nextLine, 200 + Math.random() * 240);
-            })();
-        }
+        let i = 0;
+        (function nextLine() {
+            if (gen !== bootGen || overlay.classList.contains("done")) return;
+            if (i >= BOOT_LINES.length) {
+                finish(2200);
+                return;
+            }
+            bootLog.textContent += BOOT_LINES[i++] + "\n";
+            setTimeout(nextLine, 200 + Math.random() * 240);
+        })();
     }
 
     // Expose for the terminal's `reboot` command and the replay button.
@@ -98,37 +92,33 @@
             : ["Embedded Software Engineer"];
 
     if (tw) {
-        if (reduceMotion) {
-            tw.textContent = PHRASES[0];
-        } else {
-            let pi = 0;
-            let ci = 0;
-            let deleting = false;
+        let pi = 0;
+        let ci = 0;
+        let deleting = false;
 
-            (function tick() {
-                const phrase = PHRASES[pi];
-                if (!deleting) {
-                    ci++;
-                    tw.textContent = phrase.slice(0, ci);
-                    if (ci === phrase.length) {
-                        deleting = true;
-                        setTimeout(tick, 1800);
-                        return;
-                    }
-                    setTimeout(tick, 55 + Math.random() * 50);
-                } else {
-                    ci--;
-                    tw.textContent = phrase.slice(0, ci);
-                    if (ci === 0) {
-                        deleting = false;
-                        pi = (pi + 1) % PHRASES.length;
-                        setTimeout(tick, 350);
-                        return;
-                    }
-                    setTimeout(tick, 28);
+        (function tick() {
+            const phrase = PHRASES[pi];
+            if (!deleting) {
+                ci++;
+                tw.textContent = phrase.slice(0, ci);
+                if (ci === phrase.length) {
+                    deleting = true;
+                    setTimeout(tick, 1800);
+                    return;
                 }
-            })();
-        }
+                setTimeout(tick, 55 + Math.random() * 50);
+            } else {
+                ci--;
+                tw.textContent = phrase.slice(0, ci);
+                if (ci === 0) {
+                    deleting = false;
+                    pi = (pi + 1) % PHRASES.length;
+                    setTimeout(tick, 350);
+                    return;
+                }
+                setTimeout(tick, 28);
+            }
+        })();
     }
 
     /* ---------- Theme toggle ---------- */
