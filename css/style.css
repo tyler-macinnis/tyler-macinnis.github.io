@@ -187,9 +187,12 @@ img {
     display: flex;
     justify-content: center;
     padding: 0 16px;
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
 }
 
 .nav {
+    position: relative;
     width: 100%;
     max-width: var(--max-w);
     height: var(--nav-h);
@@ -1044,29 +1047,66 @@ html[data-theme="light"] .icon-sun {
     }
 
     .nav-links {
+        /* Full-width dropdown panel anchored to the nav bar itself. */
         position: absolute;
-        top: calc(var(--nav-h) + 8px);
+        top: calc(100% + 10px);
+        left: 0;
         right: 0;
         flex-direction: column;
-        align-items: flex-end;
-        gap: 16px;
-        padding: 22px 26px;
+        align-items: stretch;
+        gap: 4px;
+        padding: 10px;
+        /* Solid, opaque background — no transparency artifacts over content. */
         background: var(--bg-alt);
         border: 1px solid var(--border);
         border-radius: var(--radius);
         box-shadow: var(--shadow);
-        transform: translateY(-12px);
+        max-height: calc(100dvh - var(--nav-h) - 40px);
+        overflow-y: auto;
+        transform: translateY(-10px);
         opacity: 0;
         visibility: hidden;
+        /* Visibility flips instantly (delayed only while fading out) so the
+           menu opens immediately even if transitions are throttled. */
         transition: transform 0.25s ease,
             opacity 0.25s ease,
-            visibility 0.25s;
+            visibility 0s 0.25s;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 13px 16px;
+        border-radius: 10px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .nav-links a:active,
+    .nav-links a:hover {
+        background: var(--surface-strong);
+        color: var(--accent);
+    }
+
+    .nav-links li:last-child {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0 6px;
+        border-top: 1px solid var(--border);
+        margin-top: 6px;
+    }
+
+    #theme-toggle {
+        width: 42px;
+        height: 42px;
     }
 
     .nav.open .nav-links {
         transform: none;
         opacity: 1;
         visibility: visible;
+        transition: transform 0.25s ease,
+            opacity 0.25s ease,
+            visibility 0s;
     }
 
     .nav.open .nav-toggle span:nth-child(1) {
