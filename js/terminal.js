@@ -128,6 +128,7 @@
                 "  socials      links around the web",
                 "  github       live repos + recent activity",
                 "  neofetch     system + live hardware info",
+                "  reboot       replay the boot sequence",
                 "  clear        clear the screen",
                 "",
                 "Tips: Up/Down for history, Tab to autocomplete.",
@@ -189,6 +190,14 @@
         },
 
         neofetch: () => systemInfo(),
+
+        reboot: () => {
+            if (typeof window.replayBoot === "function") {
+                setTimeout(window.replayBoot, 400);
+                return "Rebooting...";
+            }
+            return "reboot: boot service unavailable";
+        },
 
         whoami: () => "tyler — but you probably knew that.",
 

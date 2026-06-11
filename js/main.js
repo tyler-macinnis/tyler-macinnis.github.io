@@ -10,7 +10,7 @@
 
     const BOOT_LINES = [
         "[    0.000000] tyler-bios v2.0 — initializing...",
-        "[    0.041337] CPU: caffeine-fueled embedded engineer detected",
+        "[    0.041337] CPU: embedded engineer detected",
         "[    0.102456] Loading kernel modules: c.ko cpp.ko python.ko",
         "[    0.184201] Mounting /dev/experience ... ok",
         "[    0.226914] Mounting /dev/skills ... ok",
@@ -25,33 +25,65 @@
     function dismissBoot() {
         if (!overlay || overlay.classList.contains("done")) return;
         overlay.classList.add("done");
-        overlay.addEventListener("transitionend", () => overlay.classList.add("hidden"), { once: true });
+        overlay.addEventListener(
+            "transitionend",
+            () => {
+                // A replay may have restarted the boot before this fade-out
+                // finished — only hide if we are still dismissed.
+                if (overlay.classList.contains("done")) overlay.classList.add("hidden");
+            },
+            { once: true }
+        );
         window.removeEventListener("keydown", dismissBoot);
-        overlay.removeEventListener("click", dismissBoot);
     }
 
-    if (overlay && bootLog) {
+    // Generation counter: bumping it invalidates timers from earlier runs,
+    // so a skipped boot can be replayed immediately without interference.
+    let bootGen = 0;
+
+    function playBoot() {
+        if (!overlay || !bootLog) return;
+        const gen = ++bootGen;
+        overlay.classList.remove("done", "hidden");
+        bootLog.textContent = "";
         window.addEventListener("keydown", dismissBoot);
-        overlay.addEventListener("click", dismissBoot);
+
+        const finish = (delay) =>
+            setTimeout(() => {
+                if (gen === bootGen) dismissBoot();
+            }, delay);
 
         if (reduceMotion) {
             // Honor reduced-motion: show the full log at once, no line-by-line animation.
             bootLog.textContent = BOOT_LINES.join("\n");
-            setTimeout(dismissBoot, 1500);
+            finish(3000);
         } else {
             let i = 0;
             (function nextLine() {
-                if (overlay.classList.contains("done")) return;
+                if (gen !== bootGen || overlay.classList.contains("done")) return;
                 if (i >= BOOT_LINES.length) {
-                    setTimeout(dismissBoot, 650);
+                    finish(2200);
                     return;
                 }
                 bootLog.textContent += BOOT_LINES[i++] + "\n";
-                setTimeout(nextLine, 110 + Math.random() * 130);
+                setTimeout(nextLine, 200 + Math.random() * 240);
             })();
         }
+    }
+
+    // Expose for the terminal's `reboot` command and the replay button.
+    window.replayBoot = playBoot;
+
+    if (overlay && bootLog) {
+        overlay.addEventListener("click", dismissBoot);
+        playBoot();
     } else if (overlay) {
         overlay.classList.add("done", "hidden");
+    }
+
+    const replayBtn = document.getElementById("boot-replay");
+    if (replayBtn) {
+        replayBtn.addEventListener("click", playBoot);
     }
 
     /* ---------- Typewriter ---------- */
