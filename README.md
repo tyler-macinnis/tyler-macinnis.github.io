@@ -1,23 +1,74 @@
-[Website](https://tyler-macinnis.github.io/)
+# tyler-macinnis.github.io
 
-# 💫 About Me:
-I am currently working as an Embedded Software Engineer and am passionate about Artificial Intelligence.
+> **Live site:** [tyler-macinnis.github.io](https://tyler-macinnis.github.io/)
 
+My personal portfolio — an interactive, terminal-themed resume built entirely from scratch with
+vanilla HTML, CSS, and JavaScript. No frameworks, no build step, zero dependencies.
 
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/https://www.instagram.com/tyler_macinnis1/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/tyler-macinnis-compsci/) 
+## Features
 
-# 💻 Tech Stack:
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=flat&logo=django&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=tyler-macinnis&theme=dark&hide_border=false&include_all_commits=true&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=tyler-macinnis&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=tyler-macinnis&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
+- **Boot sequence intro** — a kernel-style boot log plays on first visit (skippable, once per session)
+- **Interactive terminal** — a fake shell with command history, tab completion, and a few
+  undocumented easter eggs (`help` to start, `sudo` at your own risk)
+- **Circuit-trace hero canvas** — particle network rendered with orthogonal PCB-style traces
+- **Live GitHub integration** — recently active repos and activity feed pulled from the GitHub
+  API at page load (cached, with graceful offline fallback)
+- **Glassmorphism design system** — dark-first with a persistent light/dark toggle
+- **Fully responsive & accessible** — semantic HTML, reduced-motion support, keyboard friendly
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=vetical&theme=dark)
+## Stack
 
----
-[![](https://visitcount.itsvg.in/api?id=tyler-macinnis&icon=1&color=7)](https://visitcount.itsvg.in)
+| Layer | Choice |
+| --- | --- |
+| Markup | Hand-written HTML5 |
+| Styling | Plain CSS (custom properties, `backdrop-filter`, grid) |
+| Behavior | Vanilla JS (Canvas 2D, IntersectionObserver) |
+| Hosting | GitHub Pages (static, `.nojekyll`) |
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## Updating content
+
+All site content lives in one place: [js/data.js](js/data.js). Edit the `SITE_DATA` object
+(experience, projects, skills, about text, socials, terminal responses, typewriter phrases)
+and refresh — no HTML or CSS changes needed.
+
+```js
+// js/data.js — add a job, project, or skill by adding an entry:
+experience: [
+  { title: "...", org: "...", date: "...", bullets: ["..."] },
+  // ...
+],
+```
+
+The interactive terminal and hero typewriter pull from the same data automatically.
+
+## Run locally
+
+**VS Code (recommended):** press `F5` — this starts the local server and launches the browser
+with the debugger attached (breakpoints work in the `js/` files). Or run the
+`Serve site (localhost:8000)` task with `Ctrl+Shift+B`.
+
+**Manual:**
+
+```powershell
+python -m http.server 8000
+```
+
+Then open `http://localhost:8000`.
+
+## Structure
+
+```text
+index.html        page skeleton (sections are filled in from data)
+js/data.js        ✏️ ALL site content — edit this to update the site
+js/render.js      builds the sections from data.js
+js/main.js        boot intro, typewriter, theme, nav, scroll reveal
+js/terminal.js    interactive resume shell (content from data.js)
+js/particles.js   hero canvas animation
+css/style.css     design tokens + all styling
+.vscode/          launch + task configs for F5 debugging
+images/           favicon + profile photo
+```
+
+## License
+
+[MIT](LICENSE)

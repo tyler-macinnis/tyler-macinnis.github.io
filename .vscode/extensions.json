@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "ms-edgedevtools.vscode-edge-devtools",
+        "ritwickdey.liveserver",
+        "davidanson.vscode-markdownlint",
+        "streetsidesoftware.code-spell-checker"
+    ]
+}

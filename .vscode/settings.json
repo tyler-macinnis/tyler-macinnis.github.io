@@ -1,0 +1,48 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.linkedEditing": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.tabSize": 4
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.tabSize": 2
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features",
+        "editor.tabSize": 2
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.tabSize": 4
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.tabSize": 4
+    },
+    "[markdown]": {
+        "editor.tabSize": 2,
+        "files.trimTrailingWhitespace": false
+    },
+    "html.format.wrapLineLength": 0,
+    "html.format.indentInnerHtml": false,
+    "js/ts.preferences.quoteStyle": "double",
+    "js/ts.format.semicolons": "insert",
+    "css.lint.duplicateProperties": "warning",
+    "css.lint.zeroUnits": "ignore",
+    "search.exclude": {
+        "**/images": true
+    },
+    "files.associations": {
+        ".nojekyll": "plaintext"
+    },
+    "liveServer.settings.port": 8000
+}

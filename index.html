@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tyler MacInnis — Embedded Software Engineer</title>
+  <meta name="description" content="Tyler MacInnis — Embedded Software Engineer at Atlas Copco. Passionate about reverse engineering and artificial intelligence.">
+  <meta name="author" content="Tyler MacInnis">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tyler MacInnis — Embedded Software Engineer">
+  <meta property="og:description" content="Embedded Software Engineer at Atlas Copco. Passionate about reverse engineering and artificial intelligence.">
+  <meta property="og:url" content="https://tyler-macinnis.github.io/">
+  <meta property="og:image" content="https://tyler-macinnis.github.io/images/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tyler MacInnis — Embedded Software Engineer">
+  <meta name="twitter:description" content="Embedded Software Engineer at Atlas Copco. Passionate about reverse engineering and artificial intelligence.">
+
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="canonical" href="https://tyler-macinnis.github.io/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Boot sequence overlay (shown once per session) ===== -->
+  <div id="boot-overlay" aria-hidden="true">
+    <pre id="boot-log"></pre>
+    <p class="boot-skip">press any key to skip</p>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav-wrap">
+    <nav class="nav glass" aria-label="Main navigation">
+      <a class="nav-logo" href="#top" aria-label="Home">
+        <span class="prompt-char">&gt;_</span> tyler@macinnis
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#terminal">terminal</a></li>
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#contact">contact</a></li>
+        <li>
+          <button id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <p class="hero-pre mono">// hello, world</p>
+        <h1 class="hero-name">Tyler MacInnis</h1>
+        <p class="hero-sub mono">
+          <span class="prompt-char">$</span>
+          <span id="typewriter"></span><span class="cursor" aria-hidden="true">█</span>
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#terminal">Open Terminal</a>
+          <a class="btn btn-ghost" href="#experience">View Experience</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/tyler-macinnis" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.16 1.18a11 11 0 0 1 5.76 0c2.19-1.49 3.15-1.18 3.15-1.18.63 1.59.23 2.76.12 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.26 5.66.41.36.78 1.06.78 2.14 0 1.54-.01 2.79-.01 3.17 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/tyler-macinnis-compsci/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a href="mailto:thmac2017@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#about" aria-label="Scroll down">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <h2 class="section-title reveal"><span class="mono section-num">01.</span> About</h2>
+      <div class="about-grid reveal">
+        <div class="about-photo-wrap">
+          <img class="about-photo" src="images/profile.jpg" alt="Portrait of Tyler MacInnis" width="280" height="280" loading="lazy">
+          <div class="photo-frame" aria-hidden="true"></div>
+        </div>
+        <div class="about-text glass">
+          <!-- Populated from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Terminal ===== -->
+    <section class="section" id="terminal">
+      <h2 class="section-title reveal"><span class="mono section-num">02.</span> Terminal</h2>
+      <p class="section-lead reveal">Explore this resume the way it was meant to be explored. Type <code>help</code> to get started.</p>
+      <div class="term glass reveal" id="term">
+        <div class="term-titlebar">
+          <span class="term-dot red"></span>
+          <span class="term-dot yellow"></span>
+          <span class="term-dot green"></span>
+          <span class="term-title mono">tyler@macinnis: ~/resume</span>
+        </div>
+        <div class="term-screen" id="term-screen" tabindex="0" role="region" aria-label="Interactive terminal. Type help for commands.">
+          <div id="term-output"></div>
+          <div class="term-input-row">
+            <span class="term-prompt mono">tyler@macinnis:~$</span>
+            <input id="term-input" class="mono" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command input">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="section" id="experience">
+      <h2 class="section-title reveal"><span class="mono section-num">03.</span> Experience</h2>
+      <div class="timeline">
+        <!-- Populated from js/data.js -->
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="section" id="projects">
+      <h2 class="section-title reveal"><span class="mono section-num">04.</span> Projects</h2>
+      <div class="project-grid">
+        <!-- Populated from js/data.js -->
+      </div>
+
+      <div class="gh-live reveal">
+        <h3 class="mono gh-heading">&gt; live_from_github <span class="gh-status" id="gh-status"></span></h3>
+        <p class="section-lead gh-lead">Pulled straight from the GitHub API — my most recently active repositories.</p>
+        <div class="repo-grid" id="gh-repos"></div>
+        <div class="gh-activity glass" id="gh-activity-wrap">
+          <h3 class="mono">&gt; recent_activity</h3>
+          <ul id="gh-activity"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section" id="skills">
+      <h2 class="section-title reveal"><span class="mono section-num">05.</span> Skills</h2>
+      <div class="skills-grid">
+        <!-- Populated from js/data.js -->
+      </div>
+    </section>
+
+    <!-- ===== Education & Awards ===== -->
+    <section class="section" id="education">
+      <h2 class="section-title reveal"><span class="mono section-num">06.</span> Education &amp; Awards</h2>
+      <div class="edu-grid">
+        <!-- Populated from js/data.js -->
+      </div>
+      <div class="more-about glass reveal">
+        <h3 class="mono">&gt; a_little_more_about_me</h3>
+        <p>Alongside my interests in computing and software development, some of my other interests and hobbies are:</p>
+        <ul class="chips">
+          <!-- Populated from js/data.js -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section-contact" id="contact">
+      <h2 class="section-title reveal"><span class="mono section-num">07.</span> Contact</h2>
+      <div class="contact-card glass reveal">
+        <!-- Populated from js/data.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="mono">© <span id="year"></span> Tyler MacInnis · built from scratch with HTML, CSS &amp; JS · <a href="https://github.com/tyler-macinnis/tyler-macinnis.github.io" target="_blank" rel="noopener">view source</a></p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
