@@ -1,9 +1,25 @@
 # tyler-macinnis.github.io
 
-> **Live site:** [tyler-macinnis.github.io](https://tyler-macinnis.github.io/)
+<!-- GitHub has no markdown syntax for centered content; a div is the only way. -->
+<!-- markdownlint-disable MD033 -->
+<div align="center">
 
-My personal portfolio — an interactive, terminal-themed resume built entirely from scratch with
-vanilla HTML, CSS, and JavaScript. No frameworks, no build step, zero dependencies.
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=1200&color=2EE6A8&center=true&vCenter=true&width=560&lines=Tyler+MacInnis;Embedded+Software+Engineer;Reverse+Engineering+%2B+AI;An+interactive+terminal-themed+resume)](https://tyler-macinnis.github.io/)
+
+[![Live Site](https://img.shields.io/badge/%F0%9F%9F%A2_VISIT_THE_LIVE_SITE-tyler--macinnis.github.io-2ee6a8?style=for-the-badge&labelColor=0a0e14)](https://tyler-macinnis.github.io/)
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-663399?style=flat&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=flat&logo=githubpages&logoColor=white)
+![Zero Dependencies](https://img.shields.io/badge/dependencies-0-2ee6a8?style=flat)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat)
+
+My personal portfolio — an interactive, terminal-themed resume built entirely from scratch
+with vanilla HTML, CSS, and JavaScript. No frameworks, no build step, zero dependencies.
+
+</div>
+<!-- markdownlint-restore -->
 
 ## Features
 
@@ -15,6 +31,10 @@ vanilla HTML, CSS, and JavaScript. No frameworks, no build step, zero dependenci
   API at page load (cached, with graceful offline fallback)
 - **Glassmorphism design system** — dark-first with a persistent light/dark toggle
 - **Fully responsive & accessible** — semantic HTML, reduced-motion support, keyboard friendly
+
+> [!TIP]
+> Open the [live site](https://tyler-macinnis.github.io/) and type `neofetch` in the terminal
+> to see your own machine's battery, RAM, and storage stats rendered in the shell.
 
 ## Stack
 
