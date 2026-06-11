@@ -22,29 +22,33 @@
         "Welcome to tyler-macinnis.github.io",
     ];
 
-    function dismissBoot() {
-        if (!overlay || overlay.classList.contains("done")) return;
-        overlay.classList.add("done");
-        overlay.addEventListener(
-            "transitionend",
-            () => {
-                // A replay may have restarted the boot before this fade-out
-                // finished — only hide if we are still dismissed.
-                if (overlay.classList.contains("done")) overlay.classList.add("hidden");
-            },
-            { once: true }
-        );
-        window.removeEventListener("keydown", dismissBoot);
-    }
-
     // Generation counter: bumping it invalidates timers from earlier runs,
     // so a skipped boot can be replayed immediately without interference.
     let bootGen = 0;
+    let hideTimer = null;
+
+    function dismissBoot() {
+        if (!overlay || overlay.classList.contains("done")) return;
+        overlay.classList.add("done");
+        window.removeEventListener("keydown", dismissBoot);
+        // Timer-based hide instead of transitionend: Chrome skips transition
+        // events when durations are ~0 (e.g. reduced-motion), which would
+        // leave the overlay un-hidden and break replays.
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(() => {
+            if (overlay.classList.contains("done")) overlay.classList.add("hidden");
+        }, 600);
+    }
 
     function playBoot() {
         if (!overlay || !bootLog) return;
         const gen = ++bootGen;
-        overlay.classList.remove("done", "hidden");
+        clearTimeout(hideTimer);
+        overlay.classList.remove("hidden");
+        // Force a reflow so the browser registers the display change before
+        // the opacity change — otherwise the fade-in is skipped after display:none.
+        void overlay.offsetWidth;
+        overlay.classList.remove("done");
         bootLog.textContent = "";
         window.addEventListener("keydown", dismissBoot);
 
@@ -159,6 +163,13 @@
                 navToggle.setAttribute("aria-expanded", "false");
             })
         );
+        // Close the mobile menu when tapping anywhere outside it.
+        document.addEventListener("click", (e) => {
+            if (nav.classList.contains("open") && !nav.contains(e.target)) {
+                nav.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+            }
+        });
     }
 
     /* ---------- Scroll reveal ---------- */

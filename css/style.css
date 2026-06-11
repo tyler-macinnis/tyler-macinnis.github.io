@@ -1037,63 +1037,163 @@ html[data-theme="light"] .icon-sun {
     text-decoration: underline;
 }
 
-position: absolute;
-top: calc(var(--nav-h) + 8px);
-right: 0;
-flex-direction: column;
-align-items: flex-end;
-gap: 16px;
-padding: 22px 26px;
-background: var(--bg-alt);
-border: 1px solid var(--border);
-border-radius: var(--radius);
-box-shadow: var(--shadow);
-transform: translateY(-12px);
-opacity: 0;
-visibility: hidden;
-transition: transform 0.25s ease,
-opacity 0.25s ease,
-visibility 0.25s;
+/* ---------- Responsive: tablets & small laptops ---------- */
+@media (max-width: 820px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: calc(var(--nav-h) + 8px);
+        right: 0;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 16px;
+        padding: 22px 26px;
+        background: var(--bg-alt);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        transform: translateY(-12px);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.25s ease,
+            opacity 0.25s ease,
+            visibility 0.25s;
+    }
+
+    .nav.open .nav-links {
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav.open .nav-toggle span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav.open .nav-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav.open .nav-toggle span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-photo-wrap {
+        margin: 0 auto 14px;
+    }
+
+    .about-photo {
+        width: min(260px, 70vw);
+    }
+
+    .section {
+        padding-top: 80px;
+    }
+
+    .term-screen {
+        height: 360px;
+        font-size: 0.8rem;
+    }
 }
 
-.nav.open .nav-links {
-    transform: none;
-    opacity: 1;
-    visibility: visible;
+/* ---------- Responsive: phones ---------- */
+@media (max-width: 520px) {
+    .section {
+        padding: 64px 14px 20px;
+    }
+
+    .nav {
+        padding: 0 16px;
+    }
+
+    .hero-content {
+        padding: 0 4px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .about-text {
+        padding: 20px 18px;
+    }
+
+    .about-facts {
+        font-size: 0.74rem;
+    }
+
+    .timeline {
+        padding-left: 26px;
+    }
+
+    .tl-marker {
+        left: -26px;
+    }
+
+    .tl-card,
+    .project-card,
+    .skill-group,
+    .edu-card,
+    .more-about {
+        padding: 18px 18px;
+    }
+
+    .term-screen {
+        height: 320px;
+    }
+
+    .gh-activity {
+        padding: 18px 16px;
+    }
+
+    .gh-activity li {
+        flex-wrap: wrap;
+    }
+
+    .contact-card {
+        padding: 28px 18px;
+    }
+
+    .boot-skip {
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
 }
 
-.nav.open .nav-toggle span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+/* ---------- Touch devices ---------- */
+@media (pointer: coarse) {
+
+    /* 16px input prevents iOS Safari from zooming the page on focus. */
+    #term-input,
+    .term-prompt {
+        font-size: 16px;
+    }
+
+    .nav-links a {
+        padding: 8px 6px;
+    }
+
+    .chips li {
+        padding: 8px 16px;
+    }
 }
 
-.nav.open .nav-toggle span:nth-child(2) {
-    opacity: 0;
-}
-
-.nav.open .nav-toggle span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
-
-.about-grid {
-    grid-template-columns: 1fr;
-}
-
-.about-photo-wrap {
-    margin: 0 auto 14px;
-}
-
-.about-photo {
-    width: min(260px, 70vw);
-}
-
-.section {
-    padding-top: 80px;
-}
-
-.term-screen {
-    height: 360px;
-    font-size: 0.8rem;
-}
+a,
+button {
+    touch-action: manipulation;
 }
 
 /* ---------- Reduced motion ---------- */
