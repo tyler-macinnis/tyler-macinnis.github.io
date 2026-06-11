@@ -4,7 +4,7 @@
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    /* ---------- Boot sequence (once per session) ---------- */
+    /* ---------- Boot sequence (every page load, skippable) ---------- */
     const overlay = document.getElementById("boot-overlay");
     const bootLog = document.getElementById("boot-log");
 
@@ -30,21 +30,26 @@
         overlay.removeEventListener("click", dismissBoot);
     }
 
-    if (overlay && bootLog && !sessionStorage.getItem("booted") && !reduceMotion) {
-        sessionStorage.setItem("booted", "1");
+    if (overlay && bootLog) {
         window.addEventListener("keydown", dismissBoot);
         overlay.addEventListener("click", dismissBoot);
 
-        let i = 0;
-        (function nextLine() {
-            if (overlay.classList.contains("done")) return;
-            if (i >= BOOT_LINES.length) {
-                setTimeout(dismissBoot, 650);
-                return;
-            }
-            bootLog.textContent += BOOT_LINES[i++] + "\n";
-            setTimeout(nextLine, 110 + Math.random() * 130);
-        })();
+        if (reduceMotion) {
+            // Honor reduced-motion: show the full log at once, no line-by-line animation.
+            bootLog.textContent = BOOT_LINES.join("\n");
+            setTimeout(dismissBoot, 1500);
+        } else {
+            let i = 0;
+            (function nextLine() {
+                if (overlay.classList.contains("done")) return;
+                if (i >= BOOT_LINES.length) {
+                    setTimeout(dismissBoot, 650);
+                    return;
+                }
+                bootLog.textContent += BOOT_LINES[i++] + "\n";
+                setTimeout(nextLine, 110 + Math.random() * 130);
+            })();
+        }
     } else if (overlay) {
         overlay.classList.add("done", "hidden");
     }
