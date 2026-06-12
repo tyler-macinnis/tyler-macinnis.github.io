@@ -190,10 +190,12 @@ const SITE_DATA = {
     /* ---------- Hobbies / "a little more about me" ---------- */
     hobbies: [
         "Reverse Engineering",
-        "Artificial Intelligence & Machine Learning",
+        "Dungeons & Dragons",
         "Reading",
         "Running",
         "Hiking",
+        "Gaming",
+        "Watching Shows and Movies"
     ],
 
     /* ---------- Contact section ---------- */
