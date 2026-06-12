@@ -11,11 +11,8 @@
     const BOOT_LINES = [
         "[    0.000000] tyler-bios v2.0 — initializing...",
         "[    0.041337] CPU: embedded engineer detected",
-        "[    0.102456] Loading kernel modules: c.ko cpp.ko python.ko",
-        "[    0.184201] Mounting /dev/experience ... ok",
-        "[    0.226914] Mounting /dev/skills ... ok",
-        "[    0.301712] Starting reverse-engineering daemon ... ok",
-        "[    0.359004] Starting ai-curiosity service ... ok",
+        "[    0.184201] Mounting /dev/experience + /dev/skills ... ok",
+        "[    0.301712] Starting reverse-engineering + ai-curiosity ... ok",
         "[    0.420815] Network: github.com/tyler-macinnis ... linked",
         "[    0.487777] All systems nominal.",
         "",
@@ -61,11 +58,11 @@
         (function nextLine() {
             if (gen !== bootGen || overlay.classList.contains("done")) return;
             if (i >= BOOT_LINES.length) {
-                finish(2200);
+                finish(900);
                 return;
             }
             bootLog.textContent += BOOT_LINES[i++] + "\n";
-            setTimeout(nextLine, 200 + Math.random() * 240);
+            setTimeout(nextLine, 90 + Math.random() * 110);
         })();
     }
 
