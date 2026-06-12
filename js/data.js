@@ -72,7 +72,7 @@ const SITE_DATA = {
         },
         {
             title: "Embedded Systems Intern",
-            org: "Atlas Copco",
+            org: "Atlas Copco (BeaconMedaes)",
             date: "June 2022 — August 2022",
             bullets: [
                 "Developed versatile unit testing and software validation procedures that can be used for a wide range of embedded systems, both legacy and future",
