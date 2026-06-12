@@ -85,7 +85,7 @@
 
         const rows = [
             ["OS", "TylerOS 1.0 LTS (bare metal)"],
-            ["Host", "Atlas Copco"],
+            ["Host", "Atlas Copco (BeaconMedaes)"],
             ["Kernel", "embedded-6.1.0-rt"],
             ["Shell", "resume-sh"],
             ["Languages", langs.join(", ")],

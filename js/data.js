@@ -41,7 +41,7 @@ const SITE_DATA = {
         // Each string is one paragraph. Basic inline HTML like
         // <strong> is allowed here.
         paragraphs: [
-            `Hi, my name is Tyler MacInnis, and I am an Embedded Software Engineer at Atlas Copco.
+            `Hi, my name is Tyler MacInnis, and I am an Embedded Software Engineer at Atlas Copco (BeaconMedaes).
        I aspire to use my computing skills to help make my corner of the world a better place.
        I have a strong work ethic and passion for using my talents.`,
             `These days my curiosity lives at the low level — taking software apart through
@@ -52,7 +52,7 @@ const SITE_DATA = {
         // The "code style" fact list under the about text.
         facts: [
             { key: "role", value: '"Embedded Software Engineer"' },
-            { key: "employer", value: '"Atlas Copco"' },
+            { key: "employer", value: '"Atlas Copco (BeaconMedaes)"' },
             { key: "interests", value: '["reverse engineering", "AI/ML", "firmware"]' },
             { key: "education", value: '"B.S. Computer Science, Clemson"' },
         ],
@@ -62,7 +62,7 @@ const SITE_DATA = {
     experience: [
         {
             title: "Embedded Software Engineer",
-            org: "Atlas Copco",
+            org: "Atlas Copco (BeaconMedaes)",
             date: "January 2023 — Present",
             bullets: [
                 "Maintain proper testing, documentation, and release procedures and automation",
