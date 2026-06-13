@@ -299,6 +299,7 @@ html[data-theme="light"] .icon-sun {
 }
 
 .hero-content {
+    width: 100%;
     max-width: 760px;
 }
 
