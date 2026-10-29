@@ -65,6 +65,7 @@ const SITE_DATA = {
             org: "Atlas Copco (BeaconMedaes)",
             date: "January 2023 — Present",
             bullets: [
+                "Recognized as Employee of the Month in October 2026",
                 "Maintain proper testing, documentation, and release procedures and automation",
                 "Maintain internal software applications",
                 "Keep development strategies up to date",
@@ -116,6 +117,17 @@ const SITE_DATA = {
 
     /* ---------- Projects ---------- */
     projects: [
+        {
+            title: "Time Capsule",
+            tags: "Python · SQLite · GitHub Actions",
+            icon: "code",
+            description:
+                "Built a desktop application for tracking important dates and milestones, with photo management, timeline views, and CSV import/export. Uses persistent SQLite storage, a per-user Windows installer, and update checks against GitHub releases. Unit tests and automated build/release workflows validate versions and changelogs before publishing executable and installer packages.",
+            link: {
+                label: "tyler-macinnis/time-capsule",
+                url: "https://github.com/tyler-macinnis/time-capsule",
+            },
+        },
         {
             title: "Good Driver Incentive Program",
             tags: "AWS · Django",
@@ -183,6 +195,7 @@ const SITE_DATA = {
 
     /* ---------- Awards ---------- */
     awards: [
+        "Employee of the Month, Atlas Copco (BeaconMedaes) — October 2026",
         "Eagle Scout — October 2014",
         "Scottish Rite JROTC Medal for Scholastic Excellence and Americanism — May 2015",
     ],
